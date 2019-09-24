@@ -210,6 +210,17 @@
 
     <repositories>
         <repository>
+            <id>nexus</id>
+            <name>Nexus Repository</name>
+            <url>http://106.54.136.182:8081/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>aliyun-repos</id>
             <name>Aliyun Repository</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
@@ -262,6 +273,19 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://106.54.136.182:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://106.54.136.182:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <pluginRepositories>
         <pluginRepository>
